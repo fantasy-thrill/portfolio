@@ -1,0 +1,60 @@
+/* CSS practice code here */
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ text-align: center;
+ font-size: 16px;
+ background: linear-gradient(rgb(157, 245, 157), lime)
+}
+
+form {
+ background-color: rgb(7, 112, 7);
+ width: 15%;
+ margin: 0 auto;
+ padding: 30px 100px;
+ min-width: 300px;
+ color: white;
+}
+
+input, label {
+ display: block;
+}
+
+input[type="checkbox"], input[type="radio"] {
+ margin: 0 5px 0 0;
+ width: 15px;
+ height: 15px;
+ display: inline;
+ vertical-align: middle;
+}
+
+label {
+ text-align: left;
+ padding-bottom: 5px;
+}
+
+input {
+ width: 99%;
+ margin: 0 auto 20px auto;
+ height: 20px;
+ font-size: 14px;
+}
+
+select {
+ width: 100%;
+ margin: 0 auto 25px auto;
+ height: 25px;
+}
+
+textarea {
+ margin-bottom: 20px;
+}
+
+button {
+ width: 150px;
+ height: 40px;
+ font-size: 18px;
+ background-color: rgb(133, 224, 133);
+ border-color: forestgreen;
+}
+
