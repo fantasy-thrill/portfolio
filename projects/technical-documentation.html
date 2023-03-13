@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My freeCodeCamp Project #3</title>
+ <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+ <nav id="navbar">
+  <header>Python Documentation</header>
+  <ul>
+   <li><a href="#introduction" class="nav-link">Introduction</a></li>
+   <li><a href="#what_can_python_be_used_for?" class="nav-link">What can Python be used for?</a></li>
+   <li><a href="#getting_started" class="nav-link">Getting started</a></li>
+   <li><a href="#variables_and_types" class="nav-link">Variables and Types</a></li>
+   <li><a href="#strings" class="nav-link">Strings</a></li>
+   <li><a href="#replacing_parts_of_a_string" class="nav-link">Replacing Parts of a String</a></li>
+   <li><a href="#joining_strings" class="nav-link">Joining Strings</a></li>
+   <li><a href="#splitting_strings" class="nav-link">Splitting Strings</a></li>
+   <li><a href="#if_statements" class="nav-link"><em>if</em> Statements</a></li>
+   <li><a href="#loops" class="nav-link">Loops</a></li>
+   <li><a href="#functions" class="nav-link">Functions</a></li>
+   <li><a href="#references" class="nav-link">References</a></li>
+  </ul>
+ </nav>
+ <main id="main-doc">
+  <section class="main-section" id="introduction">
+   <header>Introduction</header>
+   <p>Python is a widely used general-purpose, high level programming language. It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code.</p>
+   <p>Python is a programming language that lets you work quickly and integrate systems more efficiently.</p>
+   <h3>Reasons for popularity</h3>
+   <ul>
+    <li>Emphasis on code readability, shorter codes, ease of writing</li>
+    <li>Programmers can express logical concepts in fewer lines of code in comparison to languages such as C++ or Java.</li>
+    <li>Python supports multiple programming paradigms, like object-oriented, imperative and functional programming or procedural.</li>
+    <li>There exists inbuilt functions for almost all of the frequently used concepts.</li>
+    <li>Philosophy is “Simplicity is the best”.</li>
+   </ul>
+  </section>
+  <section class="main-section" id="what_can_python_be_used_for?">
+   <header>What can Python be used for?</header>
+   <p>With the process of development of web applications evolving radically in the last few years, here is what makes Python a leading contender or choice among software developers. It can build just about anything.</p>
+   <p>As a general-purpose language, Python is the single language that you may ever need for developing just about anything.</p>
+   <p>It can be used for the programming of the front end (client side) with which users interact and back end (server side) database of your website. It can be used for numerical and data analysis for scientific study and research. It can be used to develop artificial intelligence. It can be used to develop both online and offline applications from productivity tools, games and other type of app you can think off.</p>
+   <p>In short, Python is the jack-of-all-trades of programming language. And mastering it can potentially allow a software developer to be an expert in all types of programing. It is fun and easy to use.</p>
+  </section>
+  <section class="main-section" id="getting_started">
+   <header>Getting started</header>
+   <h3>Python interpreter</h3>
+   <p>To run Python programs, you will need the Python interpreter and possibly a graphical editor. A Python interpreter executes Python code (sometimes called programs).</p>
+   <p>A program can be one or more Python files. Code files can include other files or modules. To run a program, you need to specify a parameter when executing Python.</p>
+   <h3>Python IDE</h3>
+   <p>An IDE is a development environment. If you don’t want to work from the terminal, you can use an IDE. This is a graphical editor in which you can type code, work with multiple files, run code amongst other things.</p>
+   <p>IDEs can save you a lot of development time, unless you are a terminal expert. You can quickly work with multiple files, switch between projects and work with multiple people on one project.</p>
+   <p>Some popular Python IDEs are PyCharm, PyDev and Wing IDE.</p>
+   <h3>Execute Python scripts</h3>
+   <p>Execute Python scripts in the terminal or an IDE. Python files have the .py extension. Whenever you make a Python script, save it as "name.py".</p>
+   <p>A simple program (hello.py) is shown below. The first line indicates that we want to use the Python interpreter. The 3rd line outputs a line of text “hello world” to the screen.</p>
+   <p>The text below can be copied into a text editor and save as <strong>hello.py</strong>. Python works with files that end in ".py".</p>
+   <code>
+    <em style="color: gray;">#!/usr/bin/env python3</em> 
+
+    print('hello world')
+   </code>
+   <p>You can use any text editor to create a Python program. It is  recommended you use a text editor that supports syntax highlighting (text coloring) and line numbers.</p>
+  </section>
+  <section class="main-section" id="variables_and_types">
+   <header>Variables and Types</header>
+   <p>Python supports <em>different types of variables</em>  (datatypes) such as whole numbers, floating point numbers and text. You do not need to specify the datatype of a variable, you can simply assign any value to a variable.</p>
+   <p>Variables can be of several data types. Python supports integers (numbers), floating point numbers, booleans (true or false) and strings (text). Python will determine the datatype based on the value you assign to the variable. If you create a variable <em>x</em>, <em>x</em> = 3, then Python assumes its an integer. But if you assign <em>x</em> = 1.5 then Python knows its not an integer but floating point number.</p>
+   <p>The example below shows you several variables. These can be assigned as you wish. Once defined you can print them or use arithmetics.</p>
+   <code>
+    <em style="color: gray">#!/usr/bin/python</em> 
+
+    x = 3              <em style="color: gray"># a whole number</em>                    
+    f = 3.1415926      <em style="color: gray"># a floating point number</em>               
+    name = "Python"    <em style="color: gray"># a string</em> 
+
+    print(x)
+    print(f)
+    print(name)
+
+    combination = name + " " + name
+    print(combination)
+
+    sum = f + f
+    print(sum)
+   </code>
+   <p>Run the program from terminal or with an IDE.</p>
+   <code>
+    python example.py
+   </code>
+   <p>In the example we have several variables (x, f, name) which are of different data types. Later in the program we create more variables (combination, sum). Variables can be defined anywhere in the program.</p>
+   <p>A variable name must begin with a letter (upper or lower case) or an underscore. Variables cannot start with a number and are case sensitive. If you create two variables x and X, they are different variables.</p>
+  </section>
+  <section class="main-section" id="strings">
+   <header>Strings</header>
+   <p>Any time you want to use text in Python, you are using strings. Python understands you want to use a string if you use the double-quotes symbol. Once a string is created, you can simply print the string variable directly. You can access characters using block quotes.</p>
+   <p>Variables can be of the string data type. They can hold characters or text. If you create string variable <em>x</em>, you can show it on the screen using the <em>print()</em> function.</p>
+   <code>
+    x = "Hello"
+    print(x)
+   </code>
+   <p>Individual characters can be accessed using blockquotes, counting starts from zero.</p>
+   <code>
+    print(x[0])
+    print(x[1])
+   </code>
+   <h3>Substrings</h3>
+   <p>By using a colon you can create a substring. If no start or end number is written, Python assumes you mean the first character or last character. Try the example below:</p>
+   <code>
+    x = "hello world"
+    s = x[0:3]
+    print(s)
+    s = x[:3]
+    print(s)
+   </code>
+   <h3>A complete example</h3>
+   <p>This example does a lot of string operations like printing text, numbers, combining strings, slicing and accessing elements. Try the program below:</p>
+   <code>
+    x = "Nancy"
+    print(x)
+
+    # Combine numbers and text
+    s = "My lucky number is %d, what is yours?" % 7
+    print(s)
+
+    # alternative method of combining numbers and text
+    s = "My lucky number is " + str(7) + ", what is yours?"
+    print(s)
+
+    # print character by index
+    print(x[0])
+
+    # print piece of string
+    print(x[0:3])
+   </code>
+   <p>You should see this output:</p>
+   <div class="output">
+    Nancy
+    My lucky number is 7, what is yours?
+    My lucky number is 7, what is yours?
+    N
+    Nan
+   </div>
+  </section>
+  <br>
+  <section class="main-section" id="replacing_parts_of_a_string">
+   <header>Replacing Parts of a String</header>
+   <p>Python has built-in support for string replacement. Not all programming languages have a standard string replace function. Python has a lot of functionality that comes out of the box.</p>
+   <p>Define a string and call the <em>replace()</em> method. The first parameter is the word to search, the second parameter specifies the new value. The output needs to be saved in the string. If you don’t save the output, the string variable will contain the same contents. Saving output is done using: <em>s = function()</em></p>
+   <p>Try the program below:</p>
+   <code>
+    s = "Hello World"
+    s = s.replace("World","Universe")
+    print(s)
+   </code>
+   <p>Save the program as "app.py", then run it in the terminal (or IDE). This will return the new output of string variable <em>s</em>:</p>
+   <div class="output">
+    <em>python3 app.py</em>
+    Hello Universe
+   </div>
+   <h3>Number of words to replace</h3>
+   <p>An optional parameter is the number of items that will be replaced. By default it's "all". The program below replaces only the first item:</p>
+   <code>
+    s = "Hello World World World"
+    s = s.replace("World","Universe",1)
+    print(s)
+   </code>
+   <p>The parameter (1) indicates that the string should only be replaced once.</p>
+  </section>
+  <section class="main-section" id="joining_strings">
+   <header>Joining Strings</header>
+   <p>The <em>join()</em> method joins elements and returns the combined string. The join methods combines every element of the sequence.</p>
+   <p>Combine a list of words?</p>
+   <p>Combine them into a sentence with the <em>join()</em> method. The method is called on a seperator string, which can be anything from a space to a dash. This is easier than using the plus operator for every word, which would quickly become tedious with a long list of words.</p>
+   <p>The join method takes a sequence as argument. The sequence is written as single argument: you need to add brackets around the sequence. If you’d like, you can pass a variable holding the sequence as argument. This makes it easier to read. We’ll use a space a seperator string in the example below.</p>
+   <p>Try the program below:</p>
+   <code>
+    <em style="color: gray"># define strings</em>                                                          
+    firstname = "Bugs"
+    lastname = "Bunny"
+
+    <em style="color: gray"># define our sequence</em>                                                  
+    sequence = (firstname,lastname)
+
+    <em style="color: gray"># join into new string</em>                                                 
+    name = " ".join(sequence)
+    print(name)
+   </code>
+   <p>You should see this output:</p>
+   <div class="output">
+    python example.py
+    Bugs Bunny
+   </div>
+   <p>It can also join a list of words:</p>
+   <code>
+    words = ["How","are","you","doing","?"]
+    sentence = ' '.join(words)
+    print(sentence)
+   </code>
+  </section>
+  <br>
+  <section class="main-section" id="splitting_strings">
+   <header>Splitting strings</header>
+   <p>A string can be split into substrings using the <em>split()</em> method. This method is part of the string object. The parameter is optional, but you can split on a specific string or character. Given a sentence, the string can be split into words. If you have a paragraph, you can split by phrase. If you have a word, you can split it into individual characters. In most cases, the <em>split()</em> method will do. For characters, you can use the list method.</p>
+   <p>If you have a string, you can subdivide it into several strings. The string needs to have at least one separating character, which may be a space. By default the split method will use space as separator. Calling the method will return a list of all the substrings.</p>
+   <h3>String to words</h3>
+   <p>The demo below splits a string into characters.</p>
+   <code>
+    s = "It's too easy"
+    words = s.split()
+    print(words)
+   </code>
+   <p>The <em>len()</em> method will give you the number of characters and number of words:</p>
+   <code>
+    print(len(words))
+    print(len(s))
+   </code>
+   <p>Output should be similar to the image below.</p>
+   <div class="output">
+    python split.py
+    ["It's", "too", "easy"]
+    3
+    11
+   </div>
+   <h3>String to characters</h3>
+   <p>If you want to split a word into characters, use the <em>list()</em> method instead:</p>
+   <code>
+    word = "Easy"
+    x = list(word)
+    print(x)
+   </code>
+   <p>A string can be reconstructed with the <a href="#joining_strings"><em>join()</em></a> method, which combines a sequence into a new string.</p>
+  </section>
+  <section class="main-section" id="if_statements">
+   <header><em>if</em> Statements</header>
+   <p>A program sometimes may have to make choices. These choices can execute different code depending on certain condition. In Python, the <strong><em>if</em> statement</strong> is used for conditional execution or branching. An <em>if</em> statement is one of the control structures (A control structure controls the flow of the program).</p>
+   <p>The <em>if</em> statement may be combined with certain operator such as equality (==), greater than (>=), smaller than (<=) and not equal (!=). Conditions may be combined using the keywords "or" and "and".</p>
+   <p>In the example below we show the use an <em>if</em> statement, a control structure. An <em>if</em> statement evaluates data (a condition) and makes a choice. Lets have a look at a basic <em>if</em> statement. In its basic form it looks like this:</p>
+   <code>
+    <em style="color: gray">#!/usr/bin/env python3</em>
+    if &lt;condition&gt;:
+        &lt;statement&gt;
+   </code>
+   <p>In this form, there's:</p>
+   <ul>
+    <li>the condition evaluated as a Boolean, it can either be "true" or "false".</li>
+    <li>one more lines of code. Each of those lines must indented with four spaces.</li>
+   </ul>
+   <p>Several examples of the <em>if</em> statements are shown below, you can run them in the Python interpreter:</p>
+   <code>
+    <em style="color: gray">#!/usr/bin/env python3</em>
+    >>> x = 3
+    >>> if x < 10:
+    ...     print('x below ten')
+    ... 
+    x below ten
+    >>> if x > 10:
+    ...     print('x is greater than ten')
+    ... 
+    >>> if x > 1 and x < 4:
+    ...     print('x is in range')
+    ... 
+    x is in range
+    >>> 
+   </code>
+   <p>It’s very important to have four spaces for the statements. Every <em>if</em> statement needs a colon. More than one condition can be combined using the "and" keyword.</p>
+   <h3>Indentation and Blocks</h3>
+   <p>An <em>if</em> statement doesn’t need to have a single statement, it can have a block. A <strong>block</strong> is more than one statement.</p>
+   <p>The example below shows a code block with three statements (print). A block is seen by Python as a single entity, that means that if the condition is true, the whole block is executed (every statement).</p>
+   <code>
+    <em style="color: gray">#!/usr/bin/env python3</em>
+    x = 4
+    if x < 5:
+        print("x is smaller than five")
+        print("this means it's not equal to five either")
+        print("x is an integer")
+   </code>
+   <p>All programming languages can create blocks, but Python has a unique way of doing it. A block is defined only by its indention. Other programming languages often used symbols like "{", "}" or words "begin" and "end".</p>
+   <p>So a basic form of a Python <em>if</em> statement block is:</p>
+   <code>
+    if &lt;condition&gt;:
+        &lt;statement&gt;
+        &lt;statement&gt;
+        &lt;statement&gt;
+        
+   &lt;statement&gt;   <em style="color: gray"># not in block</em> 
+   </code>
+   <h3><em>if...else</em></h3>
+   <p>You can use <em>if</em> statements to make an interactive program. Copy the program below and run it. It has several <em>if</em> statements that are evaluated based on the keyboard input.</p>
+   <p>Because keyboard input is used, we use the equality sign (==) for string comparison. The second string is typed, but we need a number. You can convert the string to an integer using <em>int()</em>.</p>
+   <p>It also makes use of the <strong><em>else</em></strong> keyword, this is the other evaluation case. When comparing age (age < 5) the <em>else</em> means (>= 5), the opposite.</p>
+   <code>
+    <em style="color: gray">#!/usr/bin/env python3</em>
+
+    gender = input("Gender? ")
+    gender = gender.lower()
+    if gender == "male":
+        print("Your cat is male")
+    elif gender == "female":
+        print("Your cat is female")
+    else:
+        print("Invalid input")
+
+    age = int(input("Age of your cat? "))
+    if age < 5:
+        print("Your cat is young.")
+    else:
+        print("Your cat is adult.")
+   </code>
+   <h3><em>Elif</em></h3>
+   <p>If you want to evaluate several cases, you can use the <em>elif</em> clause. <strong><em>elif</em></strong> is short for <em>else if</em>. Unlike <em>else</em> with <em>elif</em> you can add an expression. That way instead of writing <em>if</em> over and over again, you can evaluate all cases quickly.</p>
+   <code>
+    >>> x = 3
+    >>> if x == 2:
+    ...     print('two')
+    ... elif x == 3:
+    ...     print('three')
+    ... elif x == 4:
+    ...     print('four')
+    ... else:
+    ...     print('something else')
+    ... 
+    three
+    >>> 
+   </code>
+   <p>This is more elegant and Pythonic than to write a list of <em>if</em> statements as shown below.</p>
+   <code>
+    x = 3
+    if x == 2:
+        print('two')
+    if x == 3:
+        print('three')
+    if x == 4:
+        print('four')
+   </code>
+   <p>But it all comes down to the same thing, the only difference is the syntax and readablity.</p>
+  </section>
+  <section class="main-section" id="loops">
+  <header>Loops</header>
+  <p>Programs sometimes need to repeat actions. To repeat actions we can use a <strong><em>for</em> loop</strong>. A <em>for</em> loop will repeat a code block. Repetition is continued until the stop condition is met. If the stop condition is not met, it will loop infintely.</p>
+  <p>In this example, the first loop will repeat the print function for every item of the list. The second loop will do a calculation on every element of the list "num" and print the result.</p>
+  <p>Type the code below and run the program.</p>
+  <code>
+   <em style="color: gray">#!/usr/bin/env python3</em>
+
+   city = ['Tokyo','New York','Toronto','Hong Kong']
+   print('Cities loop:')
+   for x in city:
+       print('City: ' + x)
+
+   print('\n')  # newline
+
+   num = [1,2,3,4,5,6,7,8,9]
+   print('x^2 loop:')
+   for x in num:
+       y = x * x
+       print(str(x) + '*' + str(x) + '=' + str(y))
+  </code>
+  <p>Save the file as "loopexample.py", then run the code with the command.</p>
+  </section>
+  <section class="main-section" id="functions">
+   <header>Functions</header>
+   <p>To group sets of code you can use functions. Functions are small parts of repeatable code. Without functions, we'd only have a long list of instructions. Functions can help you organize code. They can also be reused and are often included in modules.</p>
+   <p>Functions can be seen as executable code blocks. They can be used more than once. A simple example of a function would be:</p>
+   <code>
+    def currentYear():
+        print('2018')
+
+    currentYear()
+   </code>
+   <p>The function is immediately called in this example. Function definitions always start with the <em>def</em> keyword.</p>
+   <p>In the example below we have parameter <em>x</em> and <em>y</em>. Type this program and save it as "summation.py"</p>
+   <code>
+    def f(x,y):
+        return x*y
+
+    print(f(3,4))
+   </code>
+   <p>We have two functions: <em>f(x,y)</em> and <em>print()</em>. The function <em>f(x,y)</em> passed its output to the print function using the return keyword.</p>
+   <h3>Returning variables</h3>
+   <p>Functions can return variables. Sometimes a function makes a calculation or has some output. This can be given to the program with a return varaible. In many cases that output is stored in a variable:</p>
+   <code>
+    result = f(3,4)
+    print(result)
+   </code>
+   <p>The program will call the function <em>f</em> with parameters 3 and 4, then save the output to the variable result.</p>
+  </section>
+  <section class="main-section" id="references">
+   <header>References</header>
+   <p>All information from this documentation is taken from <a href="https://pythonbasics.org/" target="_blank">Python Basics</a>. The information may not be 100% accurate. </p>
+  </section>
+ </main>
+</body>
+</html>
