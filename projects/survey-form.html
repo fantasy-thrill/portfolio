@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My freeCodeCamp Project #1</title>
+ <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+ <header>
+  <h1 id="title">Vibrant Survey</h1>
+  <p id="description">Vibrant is always taking steps to improve the streaming experience for anime fans so we would love to hear your feedback!</p>
+ </header>
+ <form action="" id="survey-form">
+  <p>Please fill out the survey below</p>
+  <br>
+  <label for="name" id="name-label">Name: </label>
+  <input type="text" name="name" id="name" placeholder="ex. John" required>
+  
+  <label for="email" id="email-label">E-mail: </label>
+  <input type="email" name="email" id="email" placeholder="name@example.com" required>
+  
+  <label for="number" id="number-label">Age (optional): </label>
+  <input type="number" name="number" id="number" min="13" max="100" placeholder="Must be at least 13 years of age">
+  
+  <label for="dropdown">How did you hear about Vibrant?</label>
+  <select name="" id="dropdown">
+   <option value="">(select one)</option>
+   <option value="1">YouTube</option>
+   <option value="2">Website ad</option>
+   <option value="3">App store listing</option>
+   <option value="4">A friend or acquaintence</option>
+  </select>
+  
+  <label for="anime-genre">What are your favorite genres of anime?</label>
+   <label><input type="checkbox" value="shonen" name="anime-genre" id="shonen"> Shonen</label>
+   <label><input type="checkbox" value="action" name="anime-genre" id="action"> Action</label>
+   <label><input type="checkbox" value="mystery" name="anime-genre" id="mystery"> Mystery</label>
+   <label><input type="checkbox" value="fantasy" name="anime-genre" id="fantasy"> Fantasy</label>
+   <label><input type="checkbox" value="superhero" name="anime-genre" id="superhero"> Superhero</label>
+   <label><input type="checkbox" value="horror" name="anime-genre" id="horror"> Horror</label>
+   <label><input type="checkbox" value="comedy" name="anime-genre" id="comedy"> Comedy</label>
+   <label><input type="checkbox" value="slice-of-life" name="anime-genre" id="slice-of-life"> Slice of Life</label>
+  <br>
+  <label for="language">Do you prefer to watch anime subbed or dubbed?</label>
+   <label><input type="radio" value="subbed" name="language" id="subbed"> Subbed</label>
+   <label><input type="radio" value="dubbed" name="language" id="dubbed"> Dubbed</label>
+  <br>
+  <label for="comments">Is there anything else you would like to tell us? Write your comments down below.</label>
+  <textarea name="comments" id="" cols="40" rows="10"></textarea>
+  <button type="submit" id="submit">Submit</button>
+ </form>
+</body>
+</html>
