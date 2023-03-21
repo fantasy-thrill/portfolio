@@ -108,7 +108,7 @@ body {
   background-color: midnightblue;
   color: white;
   padding-top: 20px;
-  padding-bottom: 75px;
+  padding-bottom: 20px;
   text-align: center;
   position: relative;
   z-index: 3;
@@ -117,7 +117,9 @@ body {
 .project-list {
   display: grid;
   grid-template-columns: 600px 600px;
-  gap: 50px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  row-gap: 70px;
   justify-content: center;
 }
 
@@ -146,7 +148,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 500px;
   padding-bottom: 50px;
 }
 #contact a, #contact a:visited {
@@ -168,6 +169,7 @@ body {
 }
 .contact-links i {
   padding: 0 20px;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 1300px) {
@@ -178,11 +180,12 @@ body {
   .project-explanation {
     margin-bottom: 75px;
   }
+  .project-explanation h2 {
+    -webkit-margin-before: 5px;
+            margin-block-start: 5px;
+  }
 }
 @media screen and (max-width: 1220px) {
-  #contact {
-    height: 800px;
-  }
   .contact-links {
     display: block;
     margin: 0 auto;
@@ -196,7 +199,7 @@ body {
     height: 100%;
     position: fixed;
     top: 62px;
-    right: 0;
+    right: -30%;
     -webkit-padding-start: 0;
             padding-inline-start: 0;
     margin: 0;
@@ -204,14 +207,25 @@ body {
   #menu {
     display: block;
   }
+  .displayed {
+    right: 0 !important;
+  }
 }
 @media screen and (max-width: 400px) {
-  /* #welcome-section h1 {
-   font-size: 30px;
+  #intro-logo {
+    line-height: 1;
   }
-  #welcome-section h3 {
-   font-size: 15px
-  } */
+  #menu {
+    font-size: revert !important;
+  }
+  #navbar ul {
+    top: 48px;
+    width: 40%;
+    right: -40%;
+  }
+  .shrink {
+    font-size: revert !important;
+  }
   #profile-pic {
     width: 120px;
     height: 120px;
@@ -219,7 +233,16 @@ body {
   body {
     margin: 0;
   }
+  .project-list {
+    grid-template-columns: 300px;
+  }
   .project-img, .project-img img {
-    width: 120px;
+    width: 100%;
+  }
+  .contact-intro h1 {
+    font-size: 40px !important;
+  }
+  .contact-links i {
+    font-size: 1em;
   }
 }/*# sourceMappingURL=style.css.map */
