@@ -96,6 +96,14 @@ body {
  z-index: 1;
 }
 
+.fade-in {
+ opacity: 0;
+ position: relative;
+ top: 100px;
+ animation: fade-in 1.5s ease-in;
+ animation-fill-mode: forwards;
+}
+
 #about-me {
  background-color: rgb(37, 37, 37);
  position: relative;
@@ -180,6 +188,11 @@ body {
  }
 }
 
+@keyframes fade-in {
+ from { opacity: 0; top: 100px }
+ to { opacity: 1; top: 0px }
+}
+
 @media screen and (max-width: 1300px) {
  .project-list {
   grid-template-columns: 600px;
@@ -249,6 +262,9 @@ body {
  }
  .project-img, .project-img img {
   width: 100%;
+ }
+ #self-description {
+  font-size: 20px;
  }
  .contact-intro {
   h1 {
