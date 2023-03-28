@@ -23,13 +23,13 @@
   <i class="fa-solid fa-bars fa-2x" id="menu"></i>
  </nav>
  <section id="welcome-section">
-  <img src="images/my_avatar.jpg" alt="" id="profile-pic" width="240px" height="240px">
-  <h1 class="shrink">Hello! I'm Ryan</h1>
-  <h3 class="shrink"><em>A front-end web developer in training</em></h3>
+  <img src="images/my_avatar.jpg" alt="" id="profile-pic" width="240px" height="240px" class="fade-in">
+  <h1 class="shrink fade-in">Hello! I'm Ryan</h1>
+  <h3 class="shrink fade-in"><em>A front-end web developer in training</em></h3>
  </section>
  <section id="about-me">
   <h1 style="text-align: center; color: aqua; font-size: 50px;" class="shrink">About Me</h1>
-  <div id="self-description" class="shrink">
+  <div id="self-description">
    <p>Computers and technology have always been a huge part of my background. I grew up spending a majority of my days in front of a desktop computer or laptop, whether it was playing games, watching TV shows, or doing homework assignments. I mainly used my computer time for entertainment, but recently I’ve decided to utilize my above-average computer literacy to follow a more professional career path.</p> 
 
    <p>I had first learned about the basic web languages such as HTML, CSS, and JavaScript in a web development class I took in my junior year of high school. I wasn’t looking to become a web developer at the time, but I <em>did</em> do very well in that class. A year later, I graduated high school with the goal of going into animation and becoming a storyboard artist. Unfortunately, due to the poor state of the Western animation industry, that didn’t work out for me. I then realized that computers were my second calling, so I decided to take the path of a developer.</p>
@@ -43,7 +43,7 @@
    <div class="project-img">
      <img src="/images/fccproject1s.png" alt="survey form thumbnail">
    </div>
-   <div class="project-explanation">
+   <div class="project-explanation shrink">
     <h2>Survey form</h2>
     <p>This is the first project I built for the Responsive Web Design course in freeCodeCamp. It's a survey form created for my own streaming service. It asks the user for their personal info as well as simple questions such as how they heard about the streaming service, what type of anime do they like, and what language do they prefer to watch anime. When it comes to HTML, this survey page features a moderate usage of checkboxes, radio buttons, and text fields.</p>
     <a href="https://github.com/fantasy-thrill/portfolio/blob/main/projects/survey-form.html" target="_blank">View source code</a>
@@ -51,7 +51,7 @@
    <div class="project-img">
      <img src="/images/fccproject3s.png" alt="technical documentation thumbnail">
    </div>
-   <div class="project-explanation">
+   <div class="project-explanation shrink">
     <h2>Technical documentation</h2>
     <p>This project was a technical documentation of the programming language of my choice. I chose Python since it's one of the most popular and widely-used languages in software development. I created setions for most of the different concepts in Python such as variables, strings, and conditional statements. I received all of my information from the Python Basics website.</p>
     <a href="https://github.com/fantasy-thrill/portfolio/blob/main/projects/technical-documentation.html" target="_blank">View source code</a>
@@ -59,7 +59,7 @@
    <div class="project-img">
      <img src="/images/fccproject4s.png" alt="product landing thumbnail">
    </div>
-   <div class="project-explanation">
+   <div class="project-explanation shrink">
     <h2>Product landing page</h2>
     <p>This was a project where I created a simple webpage promoting my imaginary streaming service to consumers. I set up a big banner discussing what my streaming service is about and placed an input text field for potential users to sign up using their e-mail address. I then embedded a YouTube video for the purpose of showing users the impact of streaming and how it's become a more viable option over cable TV. Finally, I created a pricing chart showing the different tiers of membership.</p>
     <a href="https://github.com/fantasy-thrill/portfolio/blob/main/projects/landing-page.html" target="_blank">View source code</a>
@@ -67,7 +67,7 @@
    <div class="project-img">
     <img src="/images/anime-website.png" alt="anime website thumbnail">
    </div>
-   <div class="project-explanation">
+   <div class="project-explanation shrink">
     <h2>Anime website</h2>
     <p>This is my own personal website that I've been working on for a while. It's mostly what I'd want my streaming service to look like. It takes some inspiration from Crunchyroll's home page, though it's not as advanced as theirs. You can find out more info about this project in the README.md file on its GitHub repository.</p>
     <a href="https://github.com/fantasy-thrill/anime/tree/main/anime" target="_blank">View source code</a>
@@ -96,9 +96,14 @@
   </div>
  </section>
  <script>
-  const menuBtn = document.getElementById("menu");
+  const menuBtn = document.getElementById("menu")
   const menuList = document.querySelector("ul")
   const links = document.querySelectorAll('ul li a')
+
+  function hoverEffect() {
+    menuBtn.addEventListener("mouseover", () => {menuBtn.style.backgroundColor = "black"; menuBtn.style.color = "white"})
+    menuBtn.addEventListener("mouseout", () => {menuBtn.style.backgroundColor = "silver"; menuBtn.style.color = "black"})
+  }
   
   menuBtn.addEventListener("click", () => {
     menuList.classList.toggle("displayed")
@@ -108,8 +113,8 @@
       menuBtn.addEventListener("mouseout", () => menuBtn.style.backgroundColor = "darkgray")
     } else {
       menuBtn.style.backgroundColor = "silver"
-      menuBtn.addEventListener("mouseover", () => menuBtn.style.backgroundColor = "black")
-      menuBtn.addEventListener("mouseout", () => menuBtn.style.backgroundColor = "silver")
+      menuBtn.style.color = "black"
+      hoverEffect()
     }
   })
 
@@ -118,6 +123,7 @@
       if (window.innerWidth <= 990) {
         menuList.classList.remove("displayed")
         menuBtn.style.backgroundColor = "silver"
+        hoverEffect()
       }
     })
   }
