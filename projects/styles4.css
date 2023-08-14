@@ -186,3 +186,33 @@ footer ul li a, footer ul li a:visited {
   height: 270px;
  }
 }
+
+/* Responsive stylesheet for smartphones */
+
+@media screen and (max-width: 425px) {
+  #header {
+    padding: 0;
+    flex-direction: column;
+  }
+  #header-img {
+    margin: 0 auto;
+    width: 240px;
+  }
+  #nav-bar {
+    margin: 0;
+  }
+  #nav-bar ul {
+    max-width: 370px;
+    margin: 16px auto;
+  }
+  #login-or-signup {
+    margin-top: 144px;
+  }
+  #login-or-signup h1, #login-or-signup p, #login-or-signup form {
+    margin: 20px 25px;
+  }
+  #submit {
+    width: 125px
+  }
+  
+}
