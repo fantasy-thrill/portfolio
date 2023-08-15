@@ -188,6 +188,11 @@ body {
  }
 }
 
+#disclaimer {
+  max-width: 1000px;
+  margin: 50px auto 0;
+}
+
 @keyframes fade-in {
  from { opacity: 0; top: 100px }
  to { opacity: 1; top: 0px }
@@ -233,9 +238,12 @@ body {
  .displayed {
   right: 0 !important;
  }
+ #disclaimer {
+  margin: 50px 10% 0
+ }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
  #intro-logo {
   line-height: 1;
  }
