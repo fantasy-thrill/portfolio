@@ -1,143 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Ryan's Web Developer Portfolio</title>
- <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Lobster">
- <script src="https://kit.fontawesome.com/de8236324c.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan's Web Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Lobster">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <script src="https://kit.fontawesome.com/de8236324c.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
- <nav id="navbar">
-  <div id="intro-logo" class="shrink">
-   <p>Ryan's Web Developer Portfolio</p>
-  </div>
-  <ul>
-   <li><a href="#welcome-section">Intro</a></li>
-   <li><a href="#about-me">About Me</a></li>
-   <li><a href="#projects">Projects</a></li>
-   <li><a href="#contact">Contact</a></li>
-  </ul>
-  <i class="fa-solid fa-bars fa-2x" id="menu"></i>
- </nav>
- <section id="welcome-section">
-  <img src="images/portfolio-profile-pic.jpg" alt="" id="profile-pic" width="240px" height="240px" class="fade-in">
-  <h1 class="shrink fade-in">Hello! I'm Ryan</h1>
-  <h3 class="shrink fade-in"><em>A front-end web developer in training</em></h3>
- </section>
- <section id="about-me">
-  <h1 style="text-align: center; color: aqua; font-size: 50px;" class="shrink">About Me</h1>
-  <div id="self-description">
-   <p>Computers and technology have always been a huge part of my background. I grew up spending a majority of my days in front of a desktop computer or laptop, whether it was playing games, watching TV shows, or doing homework assignments. I mainly used my computer time for entertainment, but recently I’ve decided to utilize my above-average computer literacy to follow a more professional career path.</p> 
+  <nav id="navbar">
+    <div id="intro-logo" class="shrink">
+      <p>Ryan's Web Developer Portfolio</p>
+    </div>
+    <ul>
+      <li><a href="#welcome-section">Intro</a></li>
+      <li><a href="#about-me">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <i class="fa-solid fa-bars fa-2x" id="menu"></i>
+  </nav>
+  <section id="welcome-section">
+    <img src="images/portfolio-profile-pic.jpg" alt="" id="profile-pic" width="240px" height="240px" class="fade-in">
+    <h1 class="shrink fade-in">Hello! I'm Ryan</h1>
+    <h3 class="shrink fade-in"><em>A front-end web developer in training</em></h3>
+  </section>
+  <section id="about-me">
+    <h1 style="text-align: center; color: aqua; font-size: 50px;" class="shrink">About Me</h1>
+    <div id="self-description">
+      <p>Computers and technology have always been a huge part of my background. I grew up spending a majority of my
+        days in front of a desktop computer or laptop, whether it was playing games, watching TV shows, or doing
+        homework assignments. I mainly used my computer time for entertainment, but recently I’ve decided to utilize my
+        above-average computer literacy to follow a more professional career path.</p>
 
-   <p>I had first learned about the basic web languages such as HTML, CSS, and JavaScript in a web development class I took in my junior year of high school. I wasn’t looking to become a web developer at the time, but I <em>did</em> do very well in that class. A year later, I graduated high school with the goal of going into animation and becoming a storyboard artist. Unfortunately, due to the poor state of the Western animation industry, that didn’t work out for me. I then realized that computers were my second calling, so I decided to take the path of a developer.</p>
-    
-   <p>I started learning HTML and CSS again, this time with both being more familiar to me in part to that class I took in high school. Then I spent the next six months learning and studying JavaScript, doing every exercise I could to improve on it. I’m currently looking for my very first position as a front end web developer and I’m continuing to learn and build new skills as consistently as possible to make that happen!</p>
-  </div>
- </section>
- <section id="projects">
-  <h1 style="font-size: 50px" class="shrink">My Projects</h1>
-  <div class="project-list">
-   <div class="project-img">
-     <img src="/images/fccproject1s.png" alt="survey form thumbnail">
-   </div>
-   <div class="project-explanation shrink">
-    <h2>Survey form</h2>
-    <p>This is the first project I built for the Responsive Web Design course in freeCodeCamp. It's a survey form created for my own streaming service. It asks the user for their personal info as well as simple questions such as how they heard about the streaming service, what type of anime do they like, and what language do they prefer to watch anime. When it comes to HTML, this survey page features a moderate usage of checkboxes, radio buttons, and text fields.</p>
-    <a href="https://github.com/fantasy-thrill/portfolio/blob/main/projects/survey-form.html" target="_blank">View source code</a>
-   </div>
-   <div class="project-img">
-     <img src="/images/fccproject3s.png" alt="technical documentation thumbnail">
-   </div>
-   <div class="project-explanation shrink">
-    <h2>Technical documentation</h2>
-    <p>This project was a technical documentation of the programming language of my choice. I chose Python since it's one of the most popular and widely-used languages in software development. I created setions for most of the different concepts in Python such as variables, strings, and conditional statements. I received all of my information from the Python Basics website.</p>
-    <a href="https://github.com/fantasy-thrill/portfolio/blob/main/projects/technical-documentation.html" target="_blank">View source code</a>
-   </div>
-   <div class="project-img">
-     <img src="/images/fccproject4s.png" alt="product landing thumbnail">
-   </div>
-   <div class="project-explanation shrink">
-    <h2>Product landing page</h2>
-    <p>This was a project where I created a simple webpage promoting my imaginary streaming service to consumers. I set up a big banner discussing what my streaming service is about and placed an input text field for potential users to sign up using their e-mail address. I then embedded a YouTube video for the purpose of showing users the impact of streaming and how it's become a more viable option over cable TV. Finally, I created a pricing chart showing the different tiers of membership.</p>
-    <a href="https://github.com/fantasy-thrill/portfolio/blob/main/projects/landing-page.html" target="_blank">View source code</a>
-   </div>
-   <div class="project-img">
-    <img src="/images/anime-website.png" alt="anime website thumbnail">
-   </div>
-   <div class="project-explanation shrink">
-    <h2>Anime website</h2>
-    <p>This is my own personal website that I've been working on for a while. It's mostly what I'd want my streaming service to look like. It takes some inspiration from Crunchyroll's home page, though it's not as advanced as theirs. You can find out more info about this project in the README.md file on its GitHub repository.</p>
-    <a href="https://github.com/fantasy-thrill/anime-website" target="_blank">View source code</a>
-   </div>
-   <div class="project-img">
-    <img src="/images/login_page.PNG" alt="chat app login thumbnail">
-   </div>
-   <div class="project-explanation shrink">
-    <h2>Yapper Messaging app</h2>
-    <p>This is my first major project I built in React. I used the CometChat JavaScript/React SDK to handle the basic functions of a messaging app such as sending and deleting messages and also displaying delivery/read receipts. It's still in development and will have more necessary features added to it soon.</p>
-    <a href="https://github.com/fantasy-thrill/new-chat-app" target="_blank">View source code</a>
-   </div>
-  </div>
-  <br>
-  <p>More projects will be displayed soon...</p>
- </section>
- <section id="contact">
-  <div class="contact-intro">
-   <h1 style="font-size: 60px">Are you looking for someone to work on your website? Let's get in touch!</h1>
-  </div>
-  <div class="contact-links">
-   <a href="https://github.com/fantasy-thrill" target="_blank">
-    <i class="fa-brands fa-github fa-2x"></i> My GitHub
-  </a>
-  <a href="#" title="My e-mail address">
-   <i class="fa-solid fa-envelope fa-2x"></i> ryan111267@gmail.com
-  </a>
-  <a href="#" title="My phone number">
-   <i class="fa-solid fa-phone fa-2x"></i> (347) 650-3958
-  </a>
-  <a href="https://www.linkedin.com/in/ryan-doyley-168184166/" target="_blank">
-   <i class="fa-brands fa-linkedin fa-2x"></i> My LinkedIn
-  </a>
-  </div>
-  <p id="disclaimer">
-    DISCLAIMER: My projects contain files with private back-end information and therefore cannot be shared in the projects' GitHub repositories. These files are necessary for each project to run properly. For access to the full projects including the private files, you'll have to send me an e-mail.
-  </p>
- </section>
- <script>
-  const menuBtn = document.getElementById("menu")
-  const menuList = document.querySelector("ul")
-  const links = document.querySelectorAll('ul li a')
+      <p>I had first learned about the basic web languages such as HTML, CSS, and JavaScript in a web development class
+        I took in my junior year of high school. I wasn’t looking to become a web developer at the time, but I
+        <em>did</em> do very well in that class. A year later, I graduated high school with the goal of going into
+        animation and becoming a storyboard artist. Unfortunately, due to the poor state of the Western animation
+        industry, that didn’t work out for me. I then realized that computers were my second calling, so I decided to
+        take the path of a developer.</p>
 
-  function hoverEffect() {
-    menuBtn.addEventListener("mouseover", () => {menuBtn.style.backgroundColor = "black"; menuBtn.style.color = "white"})
-    menuBtn.addEventListener("mouseout", () => {menuBtn.style.backgroundColor = "silver"; menuBtn.style.color = "black"})
-  }
-  
-  menuBtn.addEventListener("click", () => {
-    menuList.classList.toggle("displayed")
-    if (menuList.classList.contains('displayed')) {
-      menuBtn.style.backgroundColor = "darkgray"
-      menuBtn.addEventListener("mouseover", () => menuBtn.style.backgroundColor = "black")
-      menuBtn.addEventListener("mouseout", () => menuBtn.style.backgroundColor = "darkgray")
-    } else {
-      menuBtn.style.backgroundColor = "silver"
-      menuBtn.style.color = "black"
-      hoverEffect()
+      <p>I started learning HTML and CSS again, this time with both being more familiar to me in part to that class I
+        took in high school. Then I spent the next six months learning and studying JavaScript, doing every exercise I
+        could to improve on it. I’m currently looking for my very first position as a front end web developer and I’m
+        continuing to learn and build new skills as consistently as possible to make that happen!</p>
+    </div>
+  </section>
+  <section id="skills">
+    <h1 style="font-size: 50px" class="shrink">Skills</h1>
+    <div id="skill-images">
+      <div class="row">
+        <div class="col-sm">
+          <img src="/images/html_logo.jpg" alt="HTML" class="skill-img">
+          HTML
+        </div>
+        <div class="col-sm">
+          <img src="images/css_logo.png" alt="" class="skill-img">
+          CSS
+        </div>
+        <div class="col-sm">
+          <img src="images/javascript-logo.png" alt="" class="skill-img">
+          JavaScript
+        </div>
+        <div class="col-sm">
+          <img src="images/react_logo.png" alt="" class="skill-img">
+          React
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <img src="images/git_logo.jpg" alt="" class="skill-img">
+          Git
+        </div>
+        <div class="col-sm">
+          <img src="images/node-js_logo.png" alt="" class="skill-img">
+          Node.js
+        </div>
+        <div class="col-sm">
+          <img src="images/mysql_logo.png" alt="" class="skill-img">
+          MySQL
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <h1 style="font-size: 50px" class="shrink">My Projects</h1>
+    <div class="project-list">
+      <div class="project-img">
+        <img src="/images/fccproject1s.png" alt="survey form thumbnail">
+      </div>
+      <div class="project-explanation shrink">
+        <h2>Survey form</h2>
+        <p>This is the first project I built for the Responsive Web Design course in freeCodeCamp. It's a survey form
+          created for my own streaming service. It asks the user for their personal info as well as simple questions
+          such as how they heard about the streaming service, what type of anime do they like, and what language do they
+          prefer to watch anime. When it comes to HTML, this survey page features a moderate usage of checkboxes, radio
+          buttons, and text fields.</p>
+        <a href="https://github.com/fantasy-thrill/portfolio/blob/main/projects/survey-form.html" target="_blank">View
+          source code</a>
+      </div>
+      <div class="project-img">
+        <img src="/images/fccproject3s.png" alt="technical documentation thumbnail">
+      </div>
+      <div class="project-explanation shrink">
+        <h2>Technical documentation</h2>
+        <p>This project was a technical documentation of the programming language of my choice. I chose Python since
+          it's one of the most popular and widely-used languages in software development. I created setions for most of
+          the different concepts in Python such as variables, strings, and conditional statements. I received all of my
+          information from the Python Basics website.</p>
+        <a href="https://github.com/fantasy-thrill/portfolio/blob/main/projects/technical-documentation.html"
+          target="_blank">View source code</a>
+      </div>
+      <div class="project-img">
+        <img src="/images/fccproject4s.png" alt="product landing thumbnail">
+      </div>
+      <div class="project-explanation shrink">
+        <h2>Product landing page</h2>
+        <p>This was a project where I created a simple webpage promoting my imaginary streaming service to consumers. I
+          set up a big banner discussing what my streaming service is about and placed an input text field for potential
+          users to sign up using their e-mail address. I then embedded a YouTube video for the purpose of showing users
+          the impact of streaming and how it's become a more viable option over cable TV. Finally, I created a pricing
+          chart showing the different tiers of membership.</p>
+        <a href="https://github.com/fantasy-thrill/portfolio/blob/main/projects/landing-page.html" target="_blank">View
+          source code</a>
+      </div>
+      <div class="project-img">
+        <img src="/images/anime-website.png" alt="anime website thumbnail">
+      </div>
+      <div class="project-explanation shrink">
+        <h2>Anime website</h2>
+        <p>This is my own personal website that I've been working on for a while. It's mostly what I'd want my streaming
+          service to look like. It takes some inspiration from Crunchyroll's home page, though it's not as advanced as
+          theirs. You can find out more info about this project in the README.md file on its GitHub repository.</p>
+        <a href="https://github.com/fantasy-thrill/anime-website" target="_blank">View source code</a>
+      </div>
+      <div class="project-img">
+        <img src="/images/login_page.PNG" alt="chat app login thumbnail">
+      </div>
+      <div class="project-explanation shrink">
+        <h2>Yapper Messaging app</h2>
+        <p>This is my first major project I built in React. I used the CometChat JavaScript/React SDK to handle the
+          basic functions of a messaging app such as sending and deleting messages and also displaying delivery/read
+          receipts. It's still in development and will have more necessary features added to it soon.</p>
+        <a href="https://github.com/fantasy-thrill/new-chat-app" target="_blank">View source code</a>
+      </div>
+    </div>
+    <br>
+    <p>More projects will be displayed soon...</p>
+  </section>
+  <section id="contact">
+    <div class="contact-intro">
+      <h1 style="font-size: 60px">Are you looking for someone to work on your website? Let's get in touch!</h1>
+    </div>
+    <div class="contact-links">
+      <a href="https://github.com/fantasy-thrill" target="_blank">
+        <i class="fa-brands fa-github fa-2x"></i> My GitHub
+      </a>
+      <a href="#" title="My e-mail address">
+        <i class="fa-solid fa-envelope fa-2x"></i> ryan111267@gmail.com
+      </a>
+      <a href="#" title="My phone number">
+        <i class="fa-solid fa-phone fa-2x"></i> (347) 650-3958
+      </a>
+      <a href="https://www.linkedin.com/in/ryan-doyley-168184166/" target="_blank">
+        <i class="fa-brands fa-linkedin fa-2x"></i> My LinkedIn
+      </a>
+    </div>
+    <p id="disclaimer">
+      DISCLAIMER: My projects contain files with private back-end information and therefore cannot be shared in the
+      projects' GitHub repositories. These files are necessary for each project to run properly. For access to the full
+      projects including the private files, you'll have to send me an e-mail.
+    </p>
+  </section>
+  <script>
+    const menuBtn = document.getElementById("menu")
+    const menuList = document.querySelector("ul")
+    const links = document.querySelectorAll('ul li a')
+
+    function hoverEffect() {
+      menuBtn.addEventListener("mouseover", () => { menuBtn.style.backgroundColor = "black"; menuBtn.style.color = "white" })
+      menuBtn.addEventListener("mouseout", () => { menuBtn.style.backgroundColor = "silver"; menuBtn.style.color = "black" })
     }
-  })
 
-  for (const link of links) {
-    link.addEventListener("click", () => {
-      if (window.innerWidth <= 990) {
-        menuList.classList.remove("displayed")
+    menuBtn.addEventListener("click", () => {
+      menuList.classList.toggle("displayed")
+      if (menuList.classList.contains('displayed')) {
+        menuBtn.style.backgroundColor = "darkgray"
+        menuBtn.addEventListener("mouseover", () => menuBtn.style.backgroundColor = "black")
+        menuBtn.addEventListener("mouseout", () => menuBtn.style.backgroundColor = "darkgray")
+      } else {
         menuBtn.style.backgroundColor = "silver"
+        menuBtn.style.color = "black"
         hoverEffect()
       }
     })
-  }
- </script>
+
+    for (const link of links) {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 990) {
+          menuList.classList.remove("displayed")
+          menuBtn.style.backgroundColor = "silver"
+          hoverEffect()
+        }
+      })
+    }
+  </script>
 </body>
+
 </html>

@@ -12,7 +12,7 @@ body {
 
 #navbar {
   width: 100%;
-  background-color: silver;
+  background-color: #c0c0c0;
   position: fixed;
   top: 0;
   z-index: 4;
@@ -24,16 +24,17 @@ body {
   list-style-type: none;
   margin: 0 30px 0 0;
 }
-#navbar ul li a, #navbar ul li a:visited {
-  color: black;
+#navbar ul li a,
+#navbar ul li a:visited {
+  color: #000000;
   padding: 20px 30px;
   display: block;
   font-size: 20px;
   text-decoration: none;
 }
 #navbar ul li a:hover {
-  background-color: rgb(95, 95, 95);
-  color: white;
+  background-color: #5f5f5f;
+  color: #ffffff;
 }
 
 #menu {
@@ -44,8 +45,8 @@ body {
 }
 
 #menu:hover {
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -61,15 +62,15 @@ body {
 }
 #welcome-section h1 {
   font-size: 60px;
-  color: white;
-  text-shadow: 2.5px 2.5px black;
+  color: #ffffff;
+  text-shadow: 2.5px 2.5px #000000;
   margin: 10px 0;
   z-index: 1;
 }
 #welcome-section h3 {
   font-size: 30px;
-  color: teal;
-  text-shadow: 1px 1px blue;
+  color: #008080;
+  text-shadow: 1px 1px #0000ff;
   margin: 10px 0;
   z-index: 1;
 }
@@ -81,7 +82,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(138, 32, 32, 0.7);
+  background-color: rgba(138, 32, 32, 0.7019607843);
 }
 
 #profile-pic {
@@ -98,11 +99,16 @@ body {
   animation-fill-mode: forwards;
 }
 
-#about-me {
-  background-color: rgb(37, 37, 37);
+#about-me,
+#skills,
+#projects {
   position: relative;
   padding: 20px 0;
   z-index: 3;
+}
+
+#about-me {
+  background-color: #252525;
 }
 
 #self-description {
@@ -112,14 +118,20 @@ body {
   margin: 0 15%;
 }
 
-#projects {
-  background-color: midnightblue;
-  color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
+#skills {
+  background-color: #a88484;
   text-align: center;
-  position: relative;
-  z-index: 3;
+}
+
+.skill-img {
+  width: 2.5em;
+  display: block;
+}
+
+#projects {
+  background-color: #191970;
+  color: #ffffff;
+  text-align: center;
 }
 
 .project-list {
@@ -142,13 +154,14 @@ body {
 .project-explanation h2 {
   margin-block-start: 2px;
 }
-.project-explanation a, .project-explanation a:visited {
+.project-explanation a,
+.project-explanation a:visited {
   color: aqua;
 }
 
 #contact {
   width: 100%;
-  background-color: rgb(51, 50, 50);
+  background-color: #333232;
   color: white;
   text-align: center;
   position: absolute;
@@ -157,7 +170,8 @@ body {
   justify-content: center;
   padding-bottom: 50px;
 }
-#contact a, #contact a:visited {
+#contact a,
+#contact a:visited {
   color: white;
   text-decoration: none;
   display: block;
@@ -259,7 +273,8 @@ body {
   .project-list {
     grid-template-columns: 300px;
   }
-  .project-img, .project-img img {
+  .project-img,
+  .project-img img {
     width: 100%;
   }
   #self-description {
