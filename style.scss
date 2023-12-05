@@ -129,9 +129,28 @@ body {
   text-align: center;
 }
 
-.skill-img {
-  width: 2.5em;
-  display: block;
+#skill-images {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+// .skill-img {
+//   width: 5em;
+//   display: block;
+//   margin: 0 auto 0.75em;
+// }
+
+#row1, #row2 {
+  display: grid;
+  margin-bottom: 1.5em;
+}
+
+#row1 {
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+#row2 {
+  grid-template-columns: 33.33% 33.33% 33.33%;
 }
 
 #projects {
