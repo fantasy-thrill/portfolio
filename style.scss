@@ -142,15 +142,23 @@ body {
 
 #row1, #row2 {
   display: grid;
-  margin-bottom: 1.5em;
-}
-
-#row1 {
+  margin-bottom: 2em;
   grid-template-columns: 25% 25% 25% 25%;
 }
 
-#row2 {
-  grid-template-columns: 33.33% 33.33% 33.33%;
+// #row1 {
+  
+// }
+
+// #row2 {
+//   grid-template-columns: 33.33% 33.33% 33.33%;
+// }
+
+.img-container {
+  p {
+    margin: 0;
+    font-size: 1.5em;
+  }
 }
 
 #projects {
