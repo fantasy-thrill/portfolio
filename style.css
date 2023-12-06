@@ -123,9 +123,24 @@ body {
   text-align: center;
 }
 
-#skill-images {
+#language-skills, #soft-skills {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 3em;
+}
+#language-skills h2, #soft-skills h2 {
+  margin: 1.5em 0;
+}
+
+#soft-skills ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2em auto;
+  grid-column-gap: 5em;
+  list-style-type: disclosure-closed;
+}
+#soft-skills ul li {
+  margin-left: 1em;
+  font-size: 2em;
 }
 
 #row1, #row2 {

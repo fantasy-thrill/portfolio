@@ -104,7 +104,7 @@ for (let skill in images) {
 
   skillImage.setAttribute("src", images[skill].path)
   skillImage.setAttribute("alt", skill)
-  skillImage.style.width = images[skill].width
+  skillImage.style.maxWidth = images[skill].width
   skillImage.style.display = "block"
 
   images[skill].marginBottom ? 
