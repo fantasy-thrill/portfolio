@@ -6,41 +6,49 @@ const images = {
   "HTML": {
     path: "https://i.postimg.cc/CxNZMrj8/html-logo.png",
     width: "5em",
+    resWidth: "4em",
     marginBottom: true
   },
   "CSS": {
     path: "https://i.postimg.cc/Hkxm56qX/css-logo.png",
     width: "4em",
+    resWidth: "3.25em",
     marginBottom: false
   },
   "JavaScript": {
     path: "https://i.postimg.cc/Z5TRQP15/javascript-logo.png",
     width: "5em",
+    resWidth: "4em",
     marginBottom: true
   },
   "React": {
     path: "https://i.postimg.cc/cLrq6r3c/react-logo.png",
     width: "5em",
+    resWidth: "4em",
     marginBottom: true
   },
   "Git": {
     path: "https://i.postimg.cc/DwFJT3bF/git-logo.png",
     width: "7.5em",
+    resWidth: "6em",
     marginBottom: true
   },
   "Node.js": {
     path: "https://i.postimg.cc/jqPSdkTj/node-js-logo.png",
     width: "10em",
+    resWidth: "6.5em",
     marginBottom: false
   },
   "MySQL": {
     path: "https://i.postimg.cc/D0kfP1rF/mysql-logo.png",
     width: "7.5em",
+    resWidth: "5em",
     marginBottom: true
   },
   "TypeScript": {
     path: "https://i.postimg.cc/Ss8kRjwP/typescript-logo.png",
     width: "5em",
+    resWidth: "4em",
     marginBottom: true
   }
 }
@@ -90,7 +98,6 @@ rows.forEach(row => {
 const skillContainers = document.querySelectorAll(".img-container")
 const captions = document.querySelectorAll(".caption")
 let count = 0;
-console.log(skillContainers, captions)
 
 for (let skill in images) {
   const skillImage = document.createElement("img")
@@ -103,6 +110,11 @@ for (let skill in images) {
   images[skill].marginBottom ? 
     skillImage.style.margin = "0 auto 0.75em" :
     skillImage.style.margin = "0 auto"
+
+  const mediaQuery = window.matchMedia('(max-width: 425px)')
+  mediaQuery.addEventListener("change", event => {
+    skillImage.style.width = event.matches ? images[skill].resWidth : images[skill].width
+  })
   
   skillContainers[count].appendChild(skillImage)
   captions[count].textContent = skill
