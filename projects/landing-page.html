@@ -1,77 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Welcome to Vibrant!</title>
- <link rel="stylesheet" href="styles4.css">
- <link href="https://fonts.googleapis.com/css2?family=Lato&family=Inter&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Vibrant!</title>
+  <link rel="stylesheet" href="styles4.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Inter&display=swap" rel="stylesheet">
 </head>
+
 <body>
- <header id="header">
-  <img id="header-img" src="..\images\vibrant_logo.jpg" alt="Vibrant">
-  <nav id="nav-bar">
-   <ul>
-    <li><a href="#login-or-signup" class="nav-link">Log in or sign up</a></li>
-    <li><a href="#about-us" class="nav-link">About us</a></li>
-    <li><a href="#pricing" class="nav-link">Pricing</a></li>
-   </ul>
-  </nav>
- </header>
- <div id="login-or-signup">
-  <h1 style="font-size: 50px;">All of your entertainment, all in one place.</h1>
-  <p>Get your dose of action, drama, and fantasy for as low as $5.99/mo. Enter your e-mail address below to get started.</p>
-  <form action="https://www.freecodecamp.com/email-submit" id="form">
-   <input type="email" name="email" id="email" placeholder="johnsmith555@example.com">
-   <input type="submit" value="Sign up" id="submit">
-  </form>
- </div>
- <main id="service-info">
-  <div id="about-us">
-   <p>The streaming wars have long begun, and Vibrant is now arriving on the battlefield! We are dedicated to bringing you series of the action and drama genre past and present. Check out the video below to learn more!</p>
-   <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/8BDbFn4HjuM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-top: 10px;" allowfullscreen></iframe>
-  </div> 
-  <p id="intro">Take a look at our subscription tiers below</p>
-  <div id="pricing">
-  <div class="packages">
-   <div class="plan-info">
-    <h4>BASIC</h4>
-    <h2>$5.99</h2>
-    <p>Ads play during shows and movies</p>
-    <p>Watch on up to two devices per household</p>
-    <p>No offline viewing or downloads</p>
-   </div>
-   <button class="select">Select</button>
-  </div>
-  <div class="packages">
-   <div class="plan-info">
-    <h4>PREMIUM</h4>
-    <h2>$9.99</h2>
-    <p>No ads during streaming</p>
-    <p>Watch on up to four devices per household</p>
-    <p>Offline viewing and downloading available</p>
-    <p>New episodes available upon release</p>
-   </div>
-   <button class="select">Select</button>
-  </div>
-  <div class="packages">
-   <div class="plan-info">
-    <h4>ULTIMATE</h4>
-    <h2>$12.99</h2>
-    <p>Watch on up to six devices per household</p>
-    <p>Free entry into sweepstakes and contests</p>
-   </div>
-   <button class="select">Select</button>
-  </div>
- </div>
- </main>
- <footer>
-  <ul>
-   <li><a href="#">Privacy</a></li>
-   <li><a href="#">Terms</a></li>
-  </ul>
-  <p style="text-align: center; font-size: 12px;">Copyright &copy; 2022 Vibrant Entertainment. We do not own rights to any videos on this webpage.</p>
- </footer>
+  <header id="header">
+    <img id="header-img" src="https://i.postimg.cc/0jsxwPvy/vibrant-logo.jpg" alt="Vibrant">
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="#login-or-signup" class="nav-link">Log in or sign up</a></li>
+        <li><a href="#about-us" class="nav-link">About us</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="login-or-signup">
+      <h1>All of your entertainment, all in one place.</h1>
+      <p>Get your dose of action, drama, and fantasy for as low as $5.99/mo. Enter your e-mail address below to get
+        started.</p>
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <input type="email" name="email" id="email" placeholder="johnsmith555@example.com" required>
+        <button id="submit">Sign up</button>
+      </form>
+    </div>
+    <div id="service-info">
+      <div id="about-us">
+        <p>The streaming wars have long begun, and Vibrant is now arriving on the battlefield! We are dedicated to
+          bringing you series of the action and drama genre past and present. Check out the video below to learn more!
+        </p>
+        <iframe id="video" width="720" height="360" src="https://www.youtube.com/embed/8BDbFn4HjuM"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          style="margin-top: 10px;" allowfullscreen></iframe>
+      </div>
+      <p id="intro">Take a look at our subscription tiers below</p>
+      <div id="pricing">
+        <div class="packages">
+          <div class="plan-info">
+            <h4>BASIC</h4>
+            <h2>$5.99</h2>
+            <p>Ads play during shows and movies</p>
+            <p>Watch on up to two devices per household</p>
+            <p>No offline viewing or downloads</p>
+          </div>
+          <button class="select">Select</button>
+        </div>
+        <div class="packages">
+          <div class="plan-info">
+            <h4>PREMIUM</h4>
+            <h2>$9.99</h2>
+            <p>No ads during streaming</p>
+            <p>Watch on up to four devices per household</p>
+            <p>Offline viewing and downloading available</p>
+            <p>New episodes available upon release</p>
+          </div>
+          <button class="select">Select</button>
+        </div>
+        <div class="packages">
+          <div class="plan-info">
+            <h4>ULTIMATE</h4>
+            <h2>$12.99</h2>
+            <p>Watch on up to six devices per household</p>
+            <p>Free entry into sweepstakes and contests</p>
+          </div>
+          <button class="select">Select</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+    <p style="text-align: center; font-size: 12px;">Copyright &copy; 2022 Vibrant Entertainment. We do not own rights to
+      any videos on this webpage.
+    </p>
+  </footer>
 </body>
+
 </html>
