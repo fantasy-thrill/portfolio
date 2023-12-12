@@ -89,18 +89,16 @@ function createDivs(element, className, times) {
   }
 }
  
-const rows = [document.getElementById("row1"), document.getElementById("row2")]
-rows.forEach(row => {
-  createDivs(row, "img-container", 4)
-  createDivs(row, "caption", 4)
-})
-
-const skillContainers = document.querySelectorAll(".img-container")
-const captions = document.querySelectorAll(".caption")
-let count = 0;
+const rows = document.querySelectorAll(".row")
+let divCount = 0;
+let indexNum = 0;
 
 for (let skill in images) {
+  const skillDiv = document.createElement("div")
   const skillImage = document.createElement("img")
+  const skillName = document.createElement("p")
+
+  skillDiv.classList.add("skill-container")
 
   skillImage.setAttribute("src", images[skill].path)
   skillImage.setAttribute("alt", skill)
@@ -116,7 +114,25 @@ for (let skill in images) {
     skillImage.style.width = event.matches ? images[skill].resWidth : images[skill].width
   })
   
-  skillContainers[count].appendChild(skillImage)
-  captions[count].textContent = skill
-  count++
+  skillName.style.textAlign = "center"
+  skillName.textContent = skill
+  skillDiv.append(skillImage, skillName)
+  rows[indexNum].appendChild(skillDiv)
+  divCount++
+
+  if (divCount === 4) {
+    indexNum++
+    divCount = 0
+  }
 }
+
+rows.forEach(row => {
+  let templateColumns = ""
+  const numOfColumns = row.childElementCount
+  
+  for (let i = 0; i < numOfColumns; i++) {
+    templateColumns = templateColumns + "1fr "
+  }
+
+  row.style.gridTemplateColumns = templateColumns.trim()
+})
