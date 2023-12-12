@@ -124,6 +124,10 @@ body {
   text-align: center;
 }
 
+.skill-img-wrapper {
+  height: 5em;
+}
+
 #language-skills, #soft-skills {
   max-width: 800px;
   margin: 0 auto 3em;
@@ -298,6 +302,9 @@ body {
   }
   #skills h2 {
     font-size: 1.25em;
+  }
+  .skill-container p {
+    margin: 0;
   }
   #soft-skills ul {
     font-size: 0.75em;

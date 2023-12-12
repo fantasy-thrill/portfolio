@@ -5,12 +5,12 @@ const links = document.querySelectorAll('ul li a')
 const images = {
   "HTML": {
     path: "https://i.postimg.cc/CxNZMrj8/html-logo.png",
-    width: "5em",
-    resWidth: "4em",
+    width: "5.5em",
+    resWidth: "4.5em",
     marginBottom: true
   },
   "CSS": {
-    path: "https://i.postimg.cc/Hkxm56qX/css-logo.png",
+    path: "https://i.postimg.cc/fb4hbDnC/css-logo.png",
     width: "4em",
     resWidth: "3.25em",
     marginBottom: false
@@ -34,7 +34,7 @@ const images = {
     marginBottom: true
   },
   "Node.js": {
-    path: "https://i.postimg.cc/jqPSdkTj/node-js-logo.png",
+    path: "https://i.postimg.cc/vTM65JRw/node-js-logo.png",
     width: "10em",
     resWidth: "6.5em",
     marginBottom: false
@@ -95,10 +95,12 @@ let indexNum = 0;
 
 for (let skill in images) {
   const skillDiv = document.createElement("div")
+  const skillWrapper = document.createElement("div")
   const skillImage = document.createElement("img")
   const skillName = document.createElement("p")
 
   skillDiv.classList.add("skill-container")
+  skillWrapper.classList.add("skill-img-wrapper")
 
   skillImage.setAttribute("src", images[skill].path)
   skillImage.setAttribute("alt", skill)
@@ -116,7 +118,8 @@ for (let skill in images) {
   
   skillName.style.textAlign = "center"
   skillName.textContent = skill
-  skillDiv.append(skillImage, skillName)
+  skillWrapper.appendChild(skillImage)
+  skillDiv.append(skillWrapper, skillName)
   rows[indexNum].appendChild(skillDiv)
   divCount++
 
