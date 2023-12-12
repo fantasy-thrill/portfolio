@@ -62,14 +62,13 @@ body {
   position: relative;
 }
 #welcome-section h1 {
-  font-size: 60px;
   color: #ffffff;
   text-shadow: 2.5px 2.5px #000000;
   margin: 10px 0;
   z-index: 1;
 }
 #welcome-section h3 {
-  font-size: 30px;
+  font-size: 2em;
   color: #008080;
   text-shadow: 1px 1px #0000ff;
   margin: 10px 0;
@@ -100,12 +99,20 @@ body {
   animation-fill-mode: forwards;
 }
 
+.banner-heading {
+  font-size: 3.75em;
+}
+
 #about-me,
 #skills,
 #projects {
   position: relative;
   padding: 20px 0;
   z-index: 3;
+}
+
+.section-heading {
+  font-size: 3.25em;
 }
 
 #about-me {

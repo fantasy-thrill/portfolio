@@ -80,14 +80,6 @@ for (const link of links) {
     }
   })
 }
-
-function createDivs(element, className, times) {
-  for (let i = 0; i < times; i++) {
-    const newDiv = document.createElement("div")
-    newDiv.classList.add(className)
-    element.appendChild(newDiv)
-  }
-}
  
 const rows = document.querySelectorAll(".row")
 let divCount = 0;
