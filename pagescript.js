@@ -27,6 +27,12 @@ const images = {
     resWidth: "4em",
     marginBottom: true
   },
+  "Python": {
+    path: "https://i.postimg.cc/m2rb3Xbb/python.png",
+    width: "5.5em",
+    resWidth: "",
+    marginBottom: false
+  },
   "Git": {
     path: "https://i.postimg.cc/DwFJT3bF/git-logo.png",
     width: "7.5em",
@@ -39,11 +45,11 @@ const images = {
     resWidth: "6.5em",
     marginBottom: false
   },
-  "MySQL": {
-    path: "https://i.postimg.cc/D0kfP1rF/mysql-logo.png",
-    width: "7.5em",
+  "SQL": {
+    path: "https://i.postimg.cc/HWzYyD1Z/SQL-Database.png",
+    width: "5.5em",
     resWidth: "5em",
-    marginBottom: true
+    marginBottom: false
   },
   "TypeScript": {
     path: "https://i.postimg.cc/Ss8kRjwP/typescript-logo.png",
@@ -95,7 +101,7 @@ for (let skill in images) {
   skillWrapper.classList.add("skill-img-wrapper")
 
   skillImage.setAttribute("src", images[skill].path)
-  skillImage.setAttribute("alt", skill)
+  skillImage.setAttribute("alt", skill + " logo")
   skillImage.style.maxWidth = images[skill].width
   skillImage.style.display = "block"
 
@@ -115,7 +121,7 @@ for (let skill in images) {
   rows[indexNum].appendChild(skillDiv)
   divCount++
 
-  if (divCount === 4) {
+  if (divCount === 5) {
     indexNum++
     divCount = 0
   }

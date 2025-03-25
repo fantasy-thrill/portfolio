@@ -117,6 +117,7 @@ body {
 
 #about-me {
   background-color: #252525;
+  padding-bottom: 5em;
 }
 
 #self-description {
@@ -164,6 +165,7 @@ body {
   background-color: #191970;
   color: #ffffff;
   text-align: center;
+  padding-bottom: 3em;
 }
 
 .project-list {
@@ -189,6 +191,10 @@ body {
 .project-explanation a,
 .project-explanation a:visited {
   color: aqua;
+}
+
+.project-link {
+  padding-right: 0.75em;
 }
 
 #contact {
