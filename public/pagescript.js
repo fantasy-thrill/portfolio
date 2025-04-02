@@ -46,7 +46,7 @@ const images = {
     marginBottom: false
   },
   "SQL": {
-    path: "https://i.postimg.cc/HWzYyD1Z/SQL-Database.png",
+    path: "https://i.postimg.cc/fTgYn1Rc/sql-logo.png",
     width: "5.5em",
     resWidth: "5em",
     marginBottom: false
