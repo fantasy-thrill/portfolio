@@ -104,6 +104,7 @@ body {
 }
 
 #about-me,
+#education,
 #skills,
 #projects {
   position: relative;
@@ -125,6 +126,37 @@ body {
   text-align: center;
   color: rgb(201, 201, 201);
   margin: 0 15%;
+}
+
+#education {
+  background-color: #57c557;
+  text-align: center;
+  padding-bottom: 2em;
+  color: #000000;
+}
+#education section {
+  margin-bottom: 2.5em;
+}
+
+.edu-row {
+  display: grid;
+  grid-template-columns: 15em 1fr;
+  max-width: 55em;
+  margin: 0 auto;
+  -moz-column-gap: 2.5em;
+       column-gap: 2.5em;
+}
+
+.edu-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edu-summary {
+  text-align: left;
+  font-size: 1.5em;
+  line-height: 0.5em;
 }
 
 #skills {
