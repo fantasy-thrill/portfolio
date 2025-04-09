@@ -109,6 +109,8 @@ const rows = document.querySelectorAll(".row")
 let divCount = 0;
 let indexNum = 0;
 
+const mediaQuery = window.matchMedia('(max-width: 440px)')
+
 for (let skill in images) {
   const skillDiv = document.createElement("div")
   const skillWrapper = document.createElement("div")
@@ -122,19 +124,15 @@ for (let skill in images) {
   skillImage.setAttribute("alt", skill + " logo")
   skillImage.style.maxWidth = images[skill].width
   skillImage.style.display = "block"
+  skillImage.style.width = mediaQuery.matches ? images[skill].resWidth : images[skill].width
 
   images[skill].marginBottom ? 
     skillImage.style.margin = "0 auto 0.75em" :
     skillImage.style.margin = "0 auto"
 
-  const mediaQuery = window.matchMedia('(max-width: 440px)')
   mediaQuery.addEventListener("change", event => {
     skillImage.style.width = event.matches ? images[skill].resWidth : images[skill].width
   })
-
-  window.onload = () => {
-    skillImage.style.width = mediaQuery.matches ? images[skill].resWidth : images[skill].width
-  }
   
   skillName.style.textAlign = "center"
   skillName.textContent = skill
