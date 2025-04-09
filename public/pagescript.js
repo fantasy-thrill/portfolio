@@ -4,7 +4,7 @@ const links = document.querySelectorAll('ul li a')
 
 function inlineMediaQueries(id, resWidth, baseWidth) {
   const logo = document.getElementById(id)
-  const mediaQuery = window.matchMedia("(max-width: 425px)")
+  const mediaQuery = window.matchMedia("(max-width: 440px)")
 
   if (mediaQuery.matches) logo.style.width = resWidth;
   else logo.style.width = baseWidth
@@ -127,7 +127,7 @@ for (let skill in images) {
     skillImage.style.margin = "0 auto 0.75em" :
     skillImage.style.margin = "0 auto"
 
-  const mediaQuery = window.matchMedia('(max-width: 425px)')
+  const mediaQuery = window.matchMedia('(max-width: 440px)')
   mediaQuery.addEventListener("change", event => {
     skillImage.style.width = event.matches ? images[skill].resWidth : images[skill].width
   })
