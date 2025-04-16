@@ -2,41 +2,56 @@ const menuBtn = document.getElementById("menu")
 const menuList = document.querySelector("ul")
 const links = document.querySelectorAll('ul li a')
 
+function inlineMediaQueries(id, resWidth, baseWidth) {
+  const logo = document.getElementById(id)
+  const mediaQuery = window.matchMedia("(max-width: 440px)")
+
+  if (mediaQuery.matches) logo.style.width = resWidth;
+  else logo.style.width = baseWidth
+
+  mediaQuery.addEventListener("change", event => {
+    logo.style.width = event.matches ? resWidth : baseWidth
+  })
+}
+
+window.onload = inlineMediaQueries("wgu-logo", "5em", "15em")
+window.onload = inlineMediaQueries("google-g-logo", "2.5em", "7.5em")
+
 const images = {
   "HTML": {
     path: "https://i.postimg.cc/CxNZMrj8/html-logo.png",
     width: "5.5em",
-    resWidth: "4.5em",
+    resWidth: "3.5em",
     marginBottom: true
   },
   "CSS": {
     path: "https://i.postimg.cc/fb4hbDnC/css-logo.png",
     width: "4em",
-    resWidth: "3.25em",
+    resWidth: "2.6em",
     marginBottom: false
   },
   "JavaScript": {
     path: "https://i.postimg.cc/Z5TRQP15/javascript-logo.png",
     width: "5em",
-    resWidth: "4em",
+    resWidth: "3.25em",
     marginBottom: true
   },
   "React": {
     path: "https://i.postimg.cc/cLrq6r3c/react-logo.png",
     width: "5em",
-    resWidth: "4em",
+    resWidth: "3.5em",
     marginBottom: true
   },
   "Python": {
     path: "https://i.postimg.cc/m2rb3Xbb/python.png",
     width: "5.5em",
-    resWidth: "",
+    resWidth: "4em",
     marginBottom: false
   },
   "Git": {
     path: "https://i.postimg.cc/DwFJT3bF/git-logo.png",
     width: "7.5em",
-    resWidth: "6em",
+    resWidth: "5em",
     marginBottom: true
   },
   "Node.js": {
@@ -46,15 +61,15 @@ const images = {
     marginBottom: false
   },
   "SQL": {
-    path: "https://i.postimg.cc/HWzYyD1Z/SQL-Database.png",
+    path: "https://i.postimg.cc/fTgYn1Rc/sql-logo.png",
     width: "5.5em",
-    resWidth: "5em",
+    resWidth: "4em",
     marginBottom: false
   },
   "TypeScript": {
     path: "https://i.postimg.cc/Ss8kRjwP/typescript-logo.png",
     width: "5em",
-    resWidth: "4em",
+    resWidth: "3em",
     marginBottom: true
   }
 }
@@ -91,6 +106,8 @@ const rows = document.querySelectorAll(".row")
 let divCount = 0;
 let indexNum = 0;
 
+const mediaQuery = window.matchMedia('(max-width: 440px)')
+
 for (let skill in images) {
   const skillDiv = document.createElement("div")
   const skillWrapper = document.createElement("div")
@@ -104,12 +121,12 @@ for (let skill in images) {
   skillImage.setAttribute("alt", skill + " logo")
   skillImage.style.maxWidth = images[skill].width
   skillImage.style.display = "block"
+  skillImage.style.width = mediaQuery.matches ? images[skill].resWidth : images[skill].width
 
   images[skill].marginBottom ? 
     skillImage.style.margin = "0 auto 0.75em" :
     skillImage.style.margin = "0 auto"
 
-  const mediaQuery = window.matchMedia('(max-width: 425px)')
   mediaQuery.addEventListener("change", event => {
     skillImage.style.width = event.matches ? images[skill].resWidth : images[skill].width
   })
