@@ -307,6 +307,11 @@ input[type="submit"] {
   font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
+#loader-icon {
+  width: 5em;
+  margin: 0 auto;
+}
+
 #disclaimer {
   max-width: 1000px;
   margin: 50px auto 0;
@@ -479,5 +484,13 @@ input[type="submit"] {
 
   #contact-form input[type="submit"]{
     font-size: 1.25em;
+  }
+
+  #loader-icon {
+    width: 2.5em;
+  }
+
+  #contact-form p {
+    font-size: 0.75em;
   }
 }
