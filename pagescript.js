@@ -1,6 +1,7 @@
 const menuBtn = document.getElementById("menu")
 const menuList = document.querySelector("ul")
 const links = document.querySelectorAll('ul li a')
+const form = document.getElementById("contact-form")
 
 function inlineMediaQueries(id, resWidth, baseWidth) {
   const logo = document.getElementById(id)
@@ -16,6 +17,12 @@ function inlineMediaQueries(id, resWidth, baseWidth) {
 
 window.onload = inlineMediaQueries("wgu-logo", "5em", "15em")
 window.onload = inlineMediaQueries("google-g-logo", "2.5em", "7.5em")
+
+// window.onload = function() {
+//   emailjs.init({
+//     publicKey: "TnawlPfFMmZgafmW4",
+//   })
+// }
 
 const images = {
   "HTML": {
@@ -153,4 +160,29 @@ rows.forEach(row => {
   }
 
   row.style.gridTemplateColumns = templateColumns.trim()
+})
+  
+form.addEventListener("submit", event => {
+  event.preventDefault()
+  console.log("Form submit attempted...")
+
+  const formData = new FormData(form)
+  const jsonData = {}
+
+  formData.forEach((value, key) => {
+    jsonData[key] = value
+  })
+
+  fetch("https://eme8t2epaf.execute-api.us-east-2.amazonaws.com/prod/send-email", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jsonData)
+  })
+    .then(response => response.json())
+    .then(() =>  console.log("Message has been sent!"))
+    .catch(error => {
+      console.log("Message not sent:\n", error)
+    })
 })

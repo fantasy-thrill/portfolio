@@ -20,13 +20,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 #navbar ul {
   display: flex;
   list-style-type: none;
   margin: 0 30px 0 0;
 }
-
 #navbar ul li a,
 #navbar ul li a:visited {
   color: #000000;
@@ -35,7 +33,6 @@ body {
   font-size: 20px;
   text-decoration: none;
 }
-
 #navbar ul li a:hover {
   background-color: #5f5f5f;
   color: #ffffff;
@@ -64,14 +61,12 @@ body {
   justify-content: center;
   position: relative;
 }
-
 #welcome-section h1 {
   color: #ffffff;
   text-shadow: 2.5px 2.5px #000000;
   margin: 10px 0;
   z-index: 1;
 }
-
 #welcome-section h3 {
   font-size: 2em;
   color: #12e3e3;
@@ -139,7 +134,6 @@ body {
   padding-bottom: 2em;
   color: #000000;
 }
-
 #education section {
   margin-bottom: 2.5em;
 }
@@ -150,7 +144,7 @@ body {
   max-width: 55em;
   margin: 0 auto;
   -moz-column-gap: 2.5em;
-  column-gap: 2.5em;
+       column-gap: 2.5em;
 }
 
 .edu-img {
@@ -174,14 +168,11 @@ body {
   height: 5em;
 }
 
-#language-skills,
-#soft-skills {
+#language-skills, #soft-skills {
   max-width: 800px;
   margin: 0 auto 3em;
 }
-
-#language-skills h2,
-#soft-skills h2 {
+#language-skills h2, #soft-skills h2 {
   margin: 1.5em 0;
 }
 
@@ -192,7 +183,6 @@ body {
   grid-column-gap: 5em;
   list-style-type: disclosure-closed;
 }
-
 #soft-skills ul li {
   margin-left: 1em;
   font-size: 2em;
@@ -214,7 +204,7 @@ body {
   display: grid;
   grid-template-columns: 600px 600px;
   -moz-column-gap: 50px;
-  column-gap: 50px;
+       column-gap: 50px;
   row-gap: 70px;
   justify-content: center;
 }
@@ -227,11 +217,9 @@ body {
   text-align: left;
   font-size: 20px;
 }
-
 .project-explanation h2 {
   margin-block-start: 2px;
 }
-
 .project-explanation a,
 .project-explanation a:visited {
   color: aqua;
@@ -252,7 +240,6 @@ body {
   justify-content: center;
   padding-bottom: 50px;
 }
-
 #contact a,
 #contact a:visited {
   color: white;
@@ -271,7 +258,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .contact-links i {
   padding: 0 20px;
   vertical-align: middle;
@@ -280,6 +266,33 @@ body {
 .contact-info {
   font-size: 1.5em;
   padding: 0.5em 1.25em;
+}
+
+#contact-fields {
+  display: grid;
+  grid-template-columns: 1fr 85%;
+  max-width: 30em;
+  margin: 1.5em auto;
+  -moz-column-gap: 1.5em;
+       column-gap: 1.5em;
+  row-gap: 1em;
+  font-size: 1.5em;
+}
+#contact-fields label {
+  text-align: left;
+}
+#contact-fields input, #contact-fields textarea {
+  font-size: 1em;
+  padding: 0.25em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=submit] {
+  font-size: 1.75em;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
 #disclaimer {
@@ -292,35 +305,29 @@ body {
     opacity: 0;
     top: 100px;
   }
-
   to {
     opacity: 1;
     top: 0px;
   }
 }
-
 @media screen and (max-width: 1300px) {
   .project-list {
     grid-template-columns: 600px;
     gap: 0;
   }
-
   .project-explanation {
     margin-bottom: 75px;
   }
-
   .project-explanation h2 {
     margin-block-start: 5px;
   }
 }
-
 @media screen and (max-width: 1220px) {
   .contact-links {
     display: block;
     margin: 0 auto;
   }
 }
-
 @media screen and (max-width: 1000px) {
   #navbar ul {
     background-color: silver;
@@ -333,107 +340,91 @@ body {
     padding-inline-start: 0;
     margin: 0;
   }
-
   #menu {
     display: block;
   }
-
   .displayed {
     right: 0 !important;
   }
-
   #disclaimer {
     margin: 50px 10% 0;
   }
 }
-
 @media screen and (max-width: 440px) {
   #intro-logo {
     line-height: 1;
   }
-
   #menu {
     font-size: revert !important;
   }
-
   #navbar ul {
     top: 48px;
     width: 40%;
     right: -40%;
   }
-
   .shrink {
     font-size: revert !important;
   }
-
   #profile-pic {
     width: 120px;
     height: 120px;
   }
-
   body {
     margin: 0;
   }
-
   .edu-row {
     max-width: 25em;
     grid-template-columns: 7.5em 1fr;
     -moz-column-gap: 2em;
-    column-gap: 2em;
+         column-gap: 2em;
   }
-
   .edu-img {
     justify-content: right;
   }
-
   .edu-summary {
     font-size: 0.75em;
     line-height: 1.5em;
   }
-
   .edu-summary p {
     margin-block-start: 0.5em;
     margin-block-end: 0;
   }
-
   #skills h2 {
     font-size: 1.25em;
   }
-
   .skill-img-wrapper {
     height: 4.25em;
   }
-
   .skill-container p {
     margin: 0;
   }
-
   #soft-skills ul {
     font-size: 0.75em;
     grid-template-columns: 1fr;
     width: 75%;
   }
-
   .project-list {
     grid-template-columns: 300px;
   }
-
   .project-img img {
     width: 100%;
     margin-bottom: 0.5em;
   }
-
   #self-description {
     font-size: 20px;
   }
-
   .contact-intro h1 {
     font-size: 2em !important;
   }
-
   .contact-links i {
     font-size: 1em;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+  #contact-fields {
+    max-width: 20em;
+    margin: 2em;
+    font-size: 1em;
+  }
+  #contact-form input[type=submit] {
+    font-size: 1.25em;
+  }
+}/*# sourceMappingURL=style.css.map */

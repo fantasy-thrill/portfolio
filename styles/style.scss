@@ -279,6 +279,34 @@ body {
   padding: 0.5em 1.25em;
 }
 
+#contact-fields {
+  display: grid;
+  grid-template-columns: 1fr 85%;
+  max-width: 30em;
+  margin: 1.5em auto;
+  column-gap: 1.5em;
+  row-gap: 1em;
+  font-size: 1.5em;
+
+  label {
+    text-align: left;
+  }
+
+  input, textarea {
+    font-size: 1em;
+    padding: 0.25em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+input[type="submit"] {
+  font-size: 1.75em;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
 #disclaimer {
   max-width: 1000px;
   margin: 50px auto 0;
@@ -441,5 +469,15 @@ body {
 
   .contact-links i {
     font-size: 1em;
+  }
+
+  #contact-fields {
+    max-width: 20em;
+    margin: 2em;
+    font-size: 1em;
+  }
+
+  #contact-form input[type="submit"]{
+    font-size: 1.25em;
   }
 }

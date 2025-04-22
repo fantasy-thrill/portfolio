@@ -231,9 +231,9 @@
       <a href="https://github.com/fantasy-thrill" target="_blank">
         <i class="fa-brands fa-github fa-2x"></i> My GitHub
       </a>
-      <div class="contact-info">
+      <!-- <div class="contact-info">
         <i class="fa-solid fa-envelope fa-2x"></i> ryan.doyley@outlook.com
-      </div>
+      </div> -->
       <div class="contact-info">
         <i class="fa-solid fa-phone fa-2x"></i> (347) 635-5695
       </div>
@@ -241,6 +241,19 @@
         <i class="fa-brands fa-linkedin fa-2x"></i> My LinkedIn
       </a>
     </div>
+    <form id="contact-form">
+      <div id="contact-fields">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+      
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email">
+      
+        <label for="message">Message: </label>
+        <textarea name="message" id="message-box" rows="10"></textarea>
+      </div>
+      <input type="submit" value="Send message">
+    </form>
   </section>
   <script src="pagescript.js"></script>
 </body>
