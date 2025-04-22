@@ -1,6 +1,7 @@
 const menuBtn = document.getElementById("menu")
 const menuList = document.querySelector("ul")
-const links = document.querySelectorAll('ul li a')
+const links = document.querySelectorAll("ul li a")
+const form = document.getElementById("contact-form")
 
 function inlineMediaQueries(id, resWidth, baseWidth) {
   const logo = document.getElementById(id)
@@ -84,7 +85,7 @@ function hoverEffect() {
 
 menuBtn.addEventListener("click", () => {
   menuList.classList.toggle("displayed")
-  if (menuList.classList.contains('displayed')) {
+  if (menuList.classList.contains("displayed")) {
     menuBtn.style.backgroundColor = "darkgray"
     menuBtn.addEventListener("mouseover", () => menuBtn.style.backgroundColor = "black")
     menuBtn.addEventListener("mouseout", () => menuBtn.style.backgroundColor = "darkgray")
@@ -109,7 +110,7 @@ const rows = document.querySelectorAll(".row")
 let divCount = 0;
 let indexNum = 0;
 
-const mediaQuery = window.matchMedia('(max-width: 440px)')
+const mediaQuery = window.matchMedia("(max-width: 440px)")
 
 for (let skill in images) {
   const skillDiv = document.createElement("div")
@@ -157,3 +158,28 @@ rows.forEach(row => {
 
   row.style.gridTemplateColumns = templateColumns.trim()
 })
+
+form.addEventListener("submit", event => {
+  event.preventDefault()
+  console.log("Form submit attempted...")
+
+  const formData = new FormData(form)
+  const jsonData = {}
+
+  formData.forEach((value, key) => {
+    jsonData[key] = value
+  })
+
+  fetch("https://eme8t2epaf.execute-api.us-east-2.amazonaws.com/prod/send-email", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jsonData)
+  })
+    .then(response => response.json())
+    .then(() =>  console.log("Message has been sent!"))
+    .catch(error => {
+      console.log("Message not sent:\n", error)
+    })
+  })
