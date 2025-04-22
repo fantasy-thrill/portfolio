@@ -2,6 +2,9 @@ const menuBtn = document.getElementById("menu")
 const menuList = document.querySelector("ul")
 const links = document.querySelectorAll("ul li a")
 const form = document.getElementById("contact-form")
+const submitButton = document.getElementById("submit-button")
+const loadingIcon = document.getElementById("loader-icon")
+const successMsg = document.querySelector("#contact-form p")
 
 function inlineMediaQueries(id, resWidth, baseWidth) {
   const logo = document.getElementById(id)
@@ -18,8 +21,10 @@ function inlineMediaQueries(id, resWidth, baseWidth) {
 window.onload = inlineMediaQueries("wgu-logo", "5em", "15em")
 window.onload = inlineMediaQueries("google-g-logo", "2.5em", "7.5em")
 
-// window.onresize = inlineMediaQueries("wgu-logo", "5em", "15em")
-// window.onresize = inlineMediaQueries("google-g-logo", "2.5em", "7.5em")
+window.onload = function() {
+  loadingIcon.style.display = "none"
+  successMsg.style.display = "none"
+}
 
 const images = {
   "HTML": {
@@ -161,6 +166,8 @@ rows.forEach(row => {
 
 form.addEventListener("submit", event => {
   event.preventDefault()
+  submitButton.style.display = "none"
+  loadingIcon.style.display = "block"
   console.log("Form submit attempted...")
 
   const formData = new FormData(form)
@@ -178,8 +185,12 @@ form.addEventListener("submit", event => {
     body: JSON.stringify(jsonData)
   })
     .then(response => response.json())
-    .then(() =>  console.log("Message has been sent!"))
+    .then(() =>  {
+      loadingIcon.style.display = "none"
+      successMsg.style.display = "block"
+      console.log("Message has been sent!")
+    })
     .catch(error => {
       console.log("Message not sent:\n", error)
     })
-  })
+})
