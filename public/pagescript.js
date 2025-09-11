@@ -20,6 +20,7 @@ function inlineMediaQueries(id, resWidth, baseWidth) {
 
 window.onload = inlineMediaQueries("wgu-logo", "5em", "15em")
 window.onload = inlineMediaQueries("google-g-logo", "2.5em", "7.5em")
+window.onload = inlineMediaQueries("aws-badge", "3.5em", "10em")
 
 window.onload = function() {
   loadingIcon.style.display = "none"
@@ -56,6 +57,12 @@ const images = {
     width: "5.5em",
     resWidth: "4em",
     marginBottom: false
+  },
+  "Java": {
+    path: "https://i.postimg.cc/htppsykS/java-logo-vector.png",
+    width: "4em",
+    resWidth: "2.75em",
+    marginBottom: true
   },
   "Git": {
     path: "https://i.postimg.cc/DwFJT3bF/git-logo.png",
