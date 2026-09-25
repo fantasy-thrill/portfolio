@@ -20,7 +20,8 @@ function inlineMediaQueries(id, resWidth, baseWidth) {
 
 window.onload = inlineMediaQueries("wgu-logo", "5em", "15em")
 window.onload = inlineMediaQueries("google-g-logo", "2.5em", "7.5em")
-window.onload = inlineMediaQueries("aws-badge", "3.5em", "10em")
+window.onload = inlineMediaQueries("aws-badge", "3.5em", "8em")
+window.onload = inlineMediaQueries("comptia-logo", "3.5em", "8em")
 
 window.onload = function() {
   loadingIcon.style.display = "none"
